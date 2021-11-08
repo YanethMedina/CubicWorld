@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <title>Cubic World</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="CSS/estilo.css">
+    </head>
+    <body id="contenido">
+        <header id="encabezado">
+            <img src="assets/Ima.jpg" alt="Ima" id="encaimg">
+            <img src="assets/Ima.jpg" alt="Ima" id="encaimg2">
+            <div id="example-3">
+                <label id="coffee" @click="show = !show">coffee</label>
+                <transition
+                  name="custom-classes-transition"
+                  enter-active-class="animated tada"
+                  leave-active-class="animated bounceOutRight">
+                  <p id="name" v-if="show">CUBIC WORLD</p>
+                </transition>
+              </div>
+        </header>
+        <section class="container text-center" id="clases">
+            <article>
+                <p id="menu">Menu</p>
+                <p id="filters">{{minimo}}<input type="range" min="0" max="100" v-model="minimo" v-on:click="mostrar=false, activo=true"/>
+                    Buscar: <input type="search" v-model="busqueda" placeholder="Buscar Bebida" v-on:click="mostrar=true, activo=false"/></p><br>
+                    
+                    <article id="lateral">
+                    <img src="assets/logo.png" alt="logo" id="imglogo">
+                    <p id="tit">CUBIC WORLD</p>
+                    <table>
+                        <tr id="encticket">
+                            <td id="ticket">Cantidad</td>
+                                <td id="ticket">Descripcion</td>
+                                <td id="ticket">Precio</td>
+                                <td id="ticket">Total</td>
+                        </tr>
+                <tr v-for="bebidas in bebida">
+                    <td id="ticket">
+                        <label id="cajita">{{bebidas.cantidad}}</label>
+                    </td>
+                        <td id="ticket">{{bebidas.nombre}}</td>
+                        <td id="ticket">${{bebidas.precio}}</td>
+                        <td id="ticket">${{bebidas.precio*bebidas.cantidad}}</td>
+                </tr>
+                    </table>
+                    <article id="resultados">
+                <p>Subtotal: ${{sub}}</p>
+                <p>Iva: ${{iva}}</p>
+                <p>Total: ${{totalP}}</p>
+            </article>
+                </article>
+                
+        <img src="assets/linea.png" alt="linea" id="imglinea">
+                <article>
+                <table id="tabla" v-show="activo">
+                    <tr id="titulos">
+                        <td id="tdprecio">Cantidad</td>
+                        <td id="tdnom">Nombre</td>
+                        <td id="tding">Ingredientes</td>
+                        <td id="tdprecio">Tamaño</td>
+                        <td id="tdprecio">Precio</td>
+                    </tr>
+                <tr id="answer" v-for="bebidas in preciosBebidas" >
+                    <td id="tdprecio">
+                        <button @click="bebidas.cantidad++" :disabled="bebidas.cantidad==30" id="mas">+</button>
+                        <button @click="bebidas.cantidad--" :disabled="bebidas.cantidad==0" id="menos">-</button>
+                    </td>
+                        <td id="tdnom">{{bebidas.nombre}}</td>
+                        <td id="tding">{{bebidas.ingredientes}}</td>
+                        <td id="tdprecio">{{bebidas.tamanio}}</td>
+                        <td id="tdprecio">${{bebidas.precio}}</td>
+                </tr>
+                    </table>
+                    <table id="tabla2" v-show="mostrar">
+                        <tr id="titulos"></tr>
+                        <td id="tdprecio">Cantidad</td>
+                        <td id="tdnom">Nombre</td>
+                        <td id="tdprecio">Precio</td>
+                    </tr>
+                <tr id="answer2" v-for="bebidas in buscarBebidas">
+                    <td id="tdprecio">
+                        <button @click="bebidas.cantidad++" :disabled="bebidas.cantidad==30" id="mas" @Click="agregar()">+</button>
+                        <button @click="bebidas.cantidad--" :disabled="bebidas.cantidad==0" id="menos">-</button>
+                    </td>
+                    <td id="tdnom">{{bebidas.nombre}}</td>
+                    <td id="tdprecio">${{bebidas.precio}}</td>
+            </tr>
+                    </table>
+            </article>
+        <footer id="pie">
+            <p>CUBIC WORLD</p>
+            <h4> Elaboro: Yaneth Medina</h4>
+    </section>
+    <script src="JS/evj8.js"></script>
+    </body>
+</html>

@@ -1,0 +1,152 @@
+*{
+    margin: 0px;
+}
+#encabezado{
+    background-color: #7D5A50;
+    text-align: center;
+    font-family: Impact;
+    color: #5C3D2E;
+    text-shadow: 5px 5px 5px #D8AC9C;
+    height: 120px;
+}
+#encaimg{
+    height: 120px;
+    width: 120px;
+    float: left;
+}
+#encaimg2{
+    height: 120px;
+    width: 120px;
+    float: right;
+}
+#coffee{font-size: 15px;}
+#name{font-size: 80px;}
+#imglinea{
+    float: right;
+    height: 860px;
+    width: 130px;
+    padding-right: 80px;
+}
+#imglogo{
+    height: 80px;
+    width: 80px;
+    float: right;
+}
+#contenido{
+    background-color: #E5B299;
+    text-align: left;
+}
+#menu{
+    text-align: center;
+    font-size: 30px;
+    font-family: Impact;
+    background-color: #865439
+}
+#encticket{
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 1000;
+}
+#tit{
+    text-align: center;
+    font-size: 30px;
+    font-family: Impact;
+}
+#filters{
+    font-size: 30px;
+    background-color: #E3D18A;
+    text-align: center;
+}
+#lateral{
+    background-color: #E2D5D5;
+    float: right;
+    width: 400px;
+    height: auto;
+    padding: 30px;
+}
+#nuevo{
+    font-size: 20px;
+    border: #1597E5 2px solid;
+    padding: 15px;
+    text-align: center;
+}
+#cajita{
+    width: 30px;
+    height: 25px;
+}
+#tdprecio{
+    font-size: 18px;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    border: #C68B59 2px solid;
+}
+#tding{
+    font-size: 18px;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border: #C68B59 2px solid;
+}
+#tdnom{
+    font-size: 18px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border: #C68B59 2px solid;
+}
+#btnAgrega{
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: #E8D0B3;
+    box-shadow: 10px 5px 5px #1DB9C3;
+}
+#mas{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #865439;
+    color: white;
+    box-shadow: 5px 5px 5px #C68B59;
+}
+#menos{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #5C3D2E;
+    box-shadow: 5px 5px 5px #C68B59;
+    color: #FFFFFF;
+}
+#resultados{
+    text-align: right;
+    font-size: 20px;
+    font-weight: lighter;
+    font-weight: bolder;
+    color: #000000;
+    padding: 20px;
+}
+#pie{
+    background-color: #7D5A50;
+    text-align: center;
+    font-size: 15px;
+    font-family: Impact;
+    color: #E2C2B9;
+}
+#tabla, #tabla2{
+    margin-left: 20px;
+    padding-top: 0px;
+}
+#ticket{
+    font-size: 15px;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    border: #C68B59;
+}
+#titulos{
+    background-color: #5C3D2E;
+    font-size: 30px;
+    color: #FFFFFF;
+    font-family: Impact;
+}
